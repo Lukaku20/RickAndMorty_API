@@ -11,6 +11,13 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+  .App-logo-small {
+ 
+    animation: App-logo-spin infinite 20s linear;
+    /* Especifica un nuevo tamaño para la imagen */
+    width: 50px;
+    height: auto;
+  }
 }
 
 .App-header {
