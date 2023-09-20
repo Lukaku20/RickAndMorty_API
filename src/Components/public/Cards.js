@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from './Card'
+import RickAndMortyService from '../../Service/RickAndMorty.service';
 
-const Cards = ({mascotas}) => {
+const Cards = () => {
  
+  const [mascotas, setMascotas] = useState([]);   
   
   
+  useEffect(() => {
+    RickAndMortyService.getAllCharacters()
+      .then((data) => setMascotas(data.results))
+      .catch((error) => console.log(error)); 
+    
+
+  }, [mascotas])
+
   const cardsList = mascotas.map((m) =>  <Card mascota={m} key={m.id} />)
  
   return (
