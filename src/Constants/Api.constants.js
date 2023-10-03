@@ -1,13 +1,12 @@
 export const API_RM = {
-
     URL: "https://rickandmortyapi.com/api",
     
-    CHARACTERS : function () {
-     return `${this.URL}/character`
+    CHARACTERS: () => {
+      return `${API_RM.URL}/character`;
     },
-
-    CHARACTER_BY_ID : function (id) {
-        return `${this.URL}/character/${id}`
-    }
-    
-}
+  
+    CHARACTERS_BY_ID: (id) => {
+      return `${API_RM.URL}/character/${id}`;
+    },
+  };
+  
